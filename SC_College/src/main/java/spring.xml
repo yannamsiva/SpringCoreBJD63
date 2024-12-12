@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.shiva.pojo.Student" id="stu">
+    <property name="sno"><value>100</value></property>
+    <property name="sname"><value>shiva</value></property>
+    <property name="sadd"><value>hyd</value></property>
+    </bean>
+    
+    
+    <bean class="com.shiva.pojo.Student" id="stu1">
+    <property name="sno"><value>101</value></property>
+    <property name="sname"><value>rani</value></property>
+    <property name="sadd"><value>hyd</value></property>
+    </bean>
+    
+    
+    <bean class="com.shiva.pojo.Student" id="stu2">
+    <property name="sno"><value>100</value></property>
+    <property name="sname"><value>manisha</value></property>
+    <property name="sadd"><value>hyd</value></property>
+    </bean>
+
+<bean class="com.shiva.pojo.College" id="clg">
+<property name="name"><value>Takeo Online</value></property>
+<property name="faculties">
+<list>
+<value>shiva</value>
+<value>shiva</value>
+<value>shiva</value>
+<value>shiva</value>
+</list></property>
+
+<property name="courses">
+<set>
+<value>MicroServices</value>
+<value>MicroServices</value>
+<value>MicroServices</value>
+<value>MicroServices</value>
+</set>
+
+</property>
+
+<property name="students">
+<list>
+<ref bean="stu"/>
+<ref bean="stu1"/>
+<ref bean="stu2"/>
+
+</list>
+</property>
+
+
+
+</bean>
+
+
+
+
+
+
+</beans>
